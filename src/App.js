@@ -3,7 +3,7 @@ import { InputComponent ,ListComponent} from "./Component";
 
 function App() {
   return (
-    <div >
+    <div className="flex">
       <InputComponent/>
       <ListComponent></ListComponent>
 
