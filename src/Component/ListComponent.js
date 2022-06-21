@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function ListComponent(props) {
   const names = useSelector((state) => {
-    console.log(state);
+    //console.log(state);
     return state.names.names;
   });
 
