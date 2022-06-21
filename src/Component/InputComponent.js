@@ -50,14 +50,16 @@ function InputComponent() {
   }
 
   return (
-    <form  className="flex flex-col w-1/2 p-24 gap-y-6"
+    <form  className="m-6 p-6 relative flex flex-col w-1/2 gap-y-6 border-2 border-gray-800 justify-center items-center text-center"
     onSubmit={handleSubmit}
 
     >
+    <span className="absolute -top-4 text-lg font-bold bg-white">InputComponent</span>
+
       <input
         type="text"
         name="fname"
-        className="h-10 rounded-md border-2 border-gray-800 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
+        className="w-1/2 h-10 rounded-md border-2 border-gray-800 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
         onChange={nameHandler}
         value={fname}
         required
@@ -68,19 +70,21 @@ function InputComponent() {
         value={lname}
         type="text"
         name="lname"
-        className="h-10 rounded-md border-2 border-gray-800 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
+        className="w-1/2 h-10 rounded-md border-2 border-gray-800 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
         placeholder="Last Name"
       />
-      <select value={gender} onChange={genderHandler} className="h-10">
+      <select value={gender} onChange={genderHandler} className="w-1/2 h-10 rounded-md border-2 border-gray-800 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1">
         <option disabled value="gender">
           Gender
         </option>
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
-      <button className="h-10 bg-green-600" type="submit">
+      <button className="h-10 w-1/4 bg-green-600" type="submit">
         Submit
       </button>
+
+     
     </form>
   );
 }
